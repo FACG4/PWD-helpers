@@ -7,7 +7,7 @@ const bodyParser = require('body-parser');
 const controllers = require('./controllers/index');
 const helpers = require('./views/helpers/index');
 
-require('env2')('./config.env');
+// require('env2')('./config.env');
 
 const app = express();
 
@@ -21,7 +21,7 @@ app.engine('hbs', exphbs({
   helpers,
 }));
 
-app.set('port', process.env.PORT || 3000);
+app.set('port', process.env.PORT || 5000);
 
 app.use(favicon(path.join(__dirname, '..', 'public', 'favicon.ico')));
 app.use(express.static(path.join(__dirname, '..', 'public')));
