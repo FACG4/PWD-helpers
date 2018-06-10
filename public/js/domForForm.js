@@ -1,3 +1,4 @@
+console.log('ffffffffffffffff');
 function openLink(evt, animName) {
   var i, x, tablinks;
   x = document.getElementsByClassName("city");
