@@ -1,52 +1,26 @@
-const btn = selector('#submit');
-btn.addEventListener('click', (e) => {
-  e.preventDefault();
-  const checkedRadiosButton = document.querySelectorAll('input[name=q1]')
-  checkedRadiosButton.forEach((radio) => {
-    if (radio.checked) {
-      alert(radio.value);
-    }
-  });
+var slideIndex = 1;
+showSlides(slideIndex);
 
-})
-const download = selector('#download');
-download.addEventListener('click', (e) => {
-  e.preventDefault();
-  Export2Doc("content" , 'balsamFile')
-})
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
 
-function Export2Doc(element, filename = '') {
-  var preHtml = "<html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'><head><meta charset='utf-8'><title>Export HTML To Doc</title></head><body>";
-  var postHtml = "</body></html>";
-  var html = preHtml + document.getElementById(element).innerHTML + postHtml;
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
 
-  var blob = new Blob(['\ufeff', html], {
-    type: 'application/msword'
-  });
-
-  // Specify link url
-  var url = 'data:application/vnd.ms-word;charset=utf-8,' + encodeURIComponent(html);
-
-  // Specify file name
-  filename = filename ? filename + '.doc' : 'document.doc';
-
-  // Create download link element
-  var downloadLink = document.createElement("a");
-
-  document.body.appendChild(downloadLink);
-
-  if (navigator.msSaveOrOpenBlob) {
-    navigator.msSaveOrOpenBlob(blob, filename);
-  } else {
-    // Create a link to the file
-    downloadLink.href = url;
-
-    // Setting the file name
-    downloadLink.download = filename;
-
-    //triggering the function
-    downloadLink.click();
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
   }
-
-  document.body.removeChild(downloadLink);
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
 }
