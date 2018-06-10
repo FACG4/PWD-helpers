@@ -4,7 +4,7 @@ const favicon = require('serve-favicon');
 const path = require('path');
 const bodyParser = require('body-parser');
 
-const controllers = require('./controllers/index');
+const controllers = require('./controllers/index.js');
 const helpers = require('./views/helpers/index');
 
 require('env2')('./config.env');
