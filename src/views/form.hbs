@@ -1,16 +1,15 @@
-
-<title>Form</title>
+<title>
+  Form</title>
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 
-<div class="w3-sidebar w3-bar-block w3-black w3-card" style="width:160px" >
+<div class="w3-sidebar w3-bar-block w3-black w3-card" style="width:160px">
   <h5 class="w3-bar-item">Sections</h5>
   <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Fade')">APROACH AND ENTRANCE</button>
   <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Left')">ENTRANCE</button>
   <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Right')">ACCESS TO SERVICES</button>
   <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Top')">TOILET ROOM</button>
   <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Bottom')">EMERGENCY, EVACUATION, ALARMS</button>
-
 </div>
 
 <div style="margin-left:160px">
@@ -22,29 +21,183 @@
     <p>It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
   </div>
 
+
+
+
+
+<!-- Second section -->
   <div id="Left" class="w3-container city w3-animate-left" style="display:none">
-    <h2>Slide in from left</h2>
-    <p>Paris is the capital of France.</p>
-    <p>The Paris area is one of the largest population centers in Europe, with more than 12 million inhabitants.</p>
-  </div>
+    <h2>SECTION B: ENTRANCE</h2>
 
-  <div id="Top" class="w3-container city w3-animate-top" style="display:none">
-    <h2>Slide in from top</h2>
-    <p>Tokyo is the capital of Japan.</p>
-    <p>It is the center of the Greater Tokyo Area, and the most populous metropolitan area in the world.</p>
-  </div>
 
-  <div id="Right" class="w3-container city w3-animate-right" style="display:none">
-    <h2>Slide in from right</h2>
-    <p>London is the capital city of England.</p>
-    <p>It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
-  </div>
+    <h2>B1 Is the entrance to the building marked and visible?</h2>
+    <input type="radio" value="Yes" name="B.1"> Yes<br>
+    <input type="radio" id="B.1" value="No" name="B.1"> No<br>
+    <input type="radio" value="DK" name="B.1"> N/A
 
-  <div id="Bottom" class="w3-container city w3-animate-bottom" style="display:none">
-    <h2>Slide in from bottom</h2>
-    <p>Paris is the capital of France.</p>
-    <p>The Paris area is one of the largest population centers in Europe, with more than 12 million inhabitants.</p>
-  </div>
+
+  <h2>B2 A.5.2 Is the main entrance accessible?
+If not, is there an alternative accessible entrance that can be used independently and in the same hours of the main entrance?</h2>
+  <input type="radio" value="Yes" name="B.2"> Yes<br>
+  <input type="radio" value="No" id="B.2" name="B.2"> No<br>
+  <input type="radio" value="DK" name="B.2"> N/A
+
+
+  <h2>B3 Is the main entrance leveled?
+If any threshold is in place, the height doesn’t exceed 20mm?</h2>
+  <input type="radio" value="Yes" name="B.3"> Yes<br>
+  <input type="radio" value="No" id="B.3" name="B.3"> No<br>
+  <input type="radio" value="DK" name="B.3"> N/A
+
+
+  <h2>B4 Is the unobstructed width of the entrance doorway at least 90cm?
+Is the unobstructed height of the entrance doorway at least 200cm?</h2>
+  <input type="radio" value="Yes" name="B.4"> Yes<br>
+  <input type="radio" value="No" id="B.4" name="B.4"> No<br>
+  <input type="radio" value="DK" name="B.4"> N/A
+
+
+  <h2>B5 Is the horizontal maneuvering space in front of the entrance door of minimum 150cm by 1 50cm?
+Is there a clear space of 60cm (70cm recommended) at the latch side of the door to allow someone to operate the door handle while using a wheel chair?</h2>
+  <input type="radio" value="Yes" name="B.5"> Yes<br>
+  <input type="radio" value="No" id="B.5" name="B.5"> No<br>
+  <input type="radio" value="DK" name="B.5"> N/A
+
+
+  <h2>B6 Is the door equipped with a handle that is operable with one hand and does not required tight grasping, pinching, or twisting of the wrist?  </h2>
+  <input type="radio" value="Yes" name="B.6"> Yes<br>
+  <input type="radio" value="No" id="B.6" name="B.6"> No<br>
+  <input type="radio" value="DK" name="B.6"> N/A
+
+
+  <h2>B7 The carpets or mats at the entrance of the building are less than 12mm?
+Are the edge of the carpets or mats securely attached? </h2>
+  <input type="radio" value="Yes" name="B.7"> Yes<br>
+  <input type="radio" value="No" id="B.7" name="B.7"> No<br>
+  <input type="radio" value="DK" name="B.7"> N/A<br>
+
+
+ Comments: <textarea  id="sectionBTextarea" rows="8" cols="80"></textarea><br>
+ Add images: <input type="file" id="sectionBImages"  value="">
+</div>
+
+
+
+<!-- Third Section -->
+<div id="Top" class="w3-container city w3-animate-top" style="display:none">
+
+</div>
+
+
+
+
+
+
+
+<!-- Fourth section -->
+<div id="Right" class="w3-container city w3-animate-right" style="display:none">
+  <h2>SECTION C: ACCESS TO SERVICES</h2>
+
+  <h2>C1 The accessible entrance provide direct access to the main floor and reception? </h2>
+  <input type="radio" value="Yes" name="C.1"> Yes<br>
+  <input type="radio" value="No" id="C.1" name="C.1"> No<br>
+  <input type="radio" value="DK" name="C.1"> N/A<br>
+
+  <h2>C2 Are all public spaces on at least one accessible route? </h2>
+  <input type="radio" value="Yes" name="C.2"> Yes<br>
+  <input type="radio" value="No" id="C.2" name="C.2"> No<br>
+  <input type="radio" value="DK" name="C.2"> N/A<br>
+
+  <h2>C3 Is the surface of the routes stable, flat and negotiable (no gravel, no sand, no obstacles)?</h2>
+  <input type="radio" value="Yes" name="C.3"> Yes<br>
+  <input type="radio" value="No" id="C.3" name="C.3"> No<br>
+  <input type="radio" value="DK" name="C.3"> N/A<br>
+
+  <h2>C4 Is the unobstructed width of the routes minimum 120cm, ideally 180cm?</h2>
+  <input type="radio" value="Yes" name="C.4"> Yes<br>
+  <input type="radio" value="No" id="C.4" name="C.4"> No<br>
+  <input type="radio" value="DK" name="C.4"> N/A<br>
+
+  <h2>C5 If  90 degrees wheelchair turns are required, a minimum maneuver space of 120cmx120cm, ideally 150cm x 150cm is provided?</h2>
+  <input type="radio" value="Yes" name="C.5"> Yes<br>
+  <input type="radio" value="No" id="C.5" name="C.5"> No<br>
+  <input type="radio" value="DK" name="C.5"> N/A<br>
+
+  <h2>C6 If If 180 degrees wheelchair turns are required, a minimum maneuver space of 200cm x 150cm is provided? </h2>
+  <input type="radio" value="Yes" name="C.6"> Yes<br>
+  <input type="radio" value="No" id="C.6" name="C.6"> No<br>
+  <input type="radio" value="DK" name="C.6"> N/A<br>
+
+<h1>C.7 Vertical circulation </h1>
+<h1>C.7.1  Internal Stairs</h1>
+
+<h2>C7.1.1  he rise of the step is higher than 150 mm, and the going of the steps are not less than 300 mm?
+*Exceptionally on adaptations of existing buildings the minimum going of the tread shall be 260 mm, and the maximum rise shall be 180 mm.</h2>
+<input type="radio" value="Yes" name="C.7.1.1"> Yes<br>
+<input type="radio" value="No" id="C.7.1.1" name="C.7.1.1"> No<br>
+<input type="radio" value="DK" name="C.7.1.1"> N/A<br>
+
+<h2>C7.1.2  Is the minimum width of the stairs 120cm?
+Is the minimum width between handrails 100cm?</h2>
+<input type="radio" value="Yes" name="C.7.1.2"> Yes<br>
+<input type="radio" value="No" id="C.7.1.2" name="C.7.1.2"> No<br>
+<input type="radio" value="DK" name="C.7.1.2"> N/A<br>
+
+<h2>C7.1.3 Is the rise of the step closed?</h2>
+<input type="radio" value="Yes" name="C.7.1.3"> Yes<br>
+<input type="radio" value="No" id="C.7.1.3" name="C.7.1.3"> No<br>
+<input type="radio" value="DK" name="C.7.1.3"> N/A<br>
+
+<h2>C7.1.4 The flight of steps contain maximum 16 risers?
+  *Exceptionally when the plan area is restricted, a flight of a stairs shall contain no more than 20 risers.</h2>
+<input type="radio" value="Yes" name="C.7.1.4"> Yes<br>
+<input type="radio" value="No" id="C.7.1.4" name="C.7.1.4"> No<br>
+<input type="radio" value="DK" name="C.7.1.4"> N/A<br>
+
+<h2>C7.1.5 Is the minimum width of the landing 150cm?</h2>
+<input type="radio" value="Yes" name="C.7.1.5"> Yes<br>
+<input type="radio" value="No" id="C.7.1.5" name="C.7.1.5"> No<br>
+<input type="radio" value="DK" name="C.7.1.5"> N/A<br>
+
+<h2>C7.1.6 Is the clear height under stairs minimum 210cm? </h2>
+<input type="radio" value="Yes" name="C.7.1.6"> Yes<br>
+<input type="radio" value="No" id="C.7.1.6" name="C.7.1.6"> No<br>
+<input type="radio" value="DK" name="C.7.1.6"> N/A<br>
+
+<h1>C.7.2 Handrails</h1>
+<h2>C7.2.1 Are handrails located on both sides of the ramp and stairs?</h2>
+<input type="radio" value="Yes" name="C.7.2.1"> Yes<br>
+<input type="radio" value="No" id="C.7.2.1" name="C.7.2.1"> No<br>
+<input type="radio" value="DK" name="C.7.2.1"> N/A<br>
+
+<h2>C7.2.2 Is the handrails profile diameter max 4.5cm and minimum 3.5 cm?  </h2>
+<input type="radio" value="Yes" name="C.7.2.2"> Yes<br>
+<input type="radio" value="No" id="C.7.2.2" name="C.7.2.2"> No<br>
+<input type="radio" value="DK" name="C.7.2.2"> N/A<br>
+
+<h2>C7.2.3 Are the handrails located at least 4cm from the adjacent wall or other obstructions? </h2>
+<input type="radio" value="Yes" name="C.7.2.3"> Yes<br>
+<input type="radio" value="No" id="C.7.2.3" name="C.7.2.3"> No<br>
+<input type="radio" value="DK" name="C.7.2.3"> N/A<br>
+
+<h2>C7.2.4 Are the first set of handrails located between 85cm and 100cm? Are the second set of handrails located between 60 and 75cm?</h2>
+<input type="radio" value="Yes" name="C.7.2.4"> Yes<br>
+<input type="radio" value="No" id="C.7.2.4" name="C.7.2.4"> No<br>
+<input type="radio" value="DK" name="C.7.2.4"> N/A<br>
+
+<h2>C7.2.5 Are handrails horizontally extended for at least 30cm at the begging and end of the ramp/stairs?</h2>
+<input type="radio" value="Yes" name="C.7.2.5"> Yes<br>
+<input type="radio" value="No" id="C.7.2.5" name="C.7.2.5"> No<br>
+<input type="radio" value="DK" name="C.7.2.5"> N/A<br>
+ </div>
+
+
+
+<div id="Bottom" class="w3-container city w3-animate-bottom" style="display:none">
+  <h2>Slide in from bottom</h2>
+  <p>Paris is the capital of France.</p>
+  <p>The Paris area is one of the largest population centers in Europe, with more than 12 million inhabitants.</p>
+</div>
 
 
 </div>
