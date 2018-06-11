@@ -304,11 +304,6 @@ Are the edge of the carpets or mats securely attached? </h2>
 
 
 
-
-
-
-
-
 <!-- Fourth section -->
 <div id="Right" class="w3-container city w3-animate-right" style="display:none">
   <h2>SECTION C: ACCESS TO SERVICES</h2>
@@ -426,13 +421,22 @@ Is the minimum width between handrails 100cm?</h2>
   <input type="radio" name="E.3" value="yes"> Yes<br>
   <input type="radio" name="E.3" value="no" id="E.3"> No<br>
   <input type="radio" name="E.3" value="dk"> Don't Know
-</div>
+
+<form class="" action="/analysis" method="post">
+  <input type="submit" name="Submit" value="Submit">
+</form>
 
 </div>
 
+</div>
+
+<script src="./js/logic.js"></script>
 <script src="./js/domForForm.js"></script>
+<!-- <script src="./js/domSectionA.js"></script> -->
 <script src="./js/domSectionB.js"></script>
 <script src="./js/domSectionC.js"></script>
+<script src="./js/domSectionD.js"></script>
+<script src="./js/domSectionE.js"></script>
 
 <style media="screen">
 .w3-red, .w3-hover-red:hover {
