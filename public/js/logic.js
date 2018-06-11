@@ -9,7 +9,11 @@ const analysis = selectorById('analysis');
 const submitDataToGetAnalysis = selectorById('submitDataToGetAnalysis');
 submitDataToGetAnalysis.addEventListener('click' , ()=>{
 
-  allSectionContainer.style.display = 'none';
-  sideMenu.style.display = 'none';
-  analysis.style.display = 'block';
+  // allSectionContainer.style.display = 'none';
+  // sideMenu.style.display = 'none';
+  // analysis.style.display = 'block';
+
+ 
+
+
 })
