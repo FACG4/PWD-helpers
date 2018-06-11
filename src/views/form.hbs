@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 
-<div class="w3-sidebar w3-bar-block w3-black w3-card" style="width:160px">
+<div class="w3-sidebar w3-bar-block w3-black w3-card" style="width:160px" id="sideMenu">
   <h5 class="w3-bar-item">Sections</h5>
   <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Fade')">APROACH AND ENTRANCE</button>
   <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Left')">ENTRANCE</button>
@@ -12,7 +12,7 @@
   <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Bottom')">EMERGENCY, EVACUATION, ALARMS</button>
 </div>
 
-<div style="margin-left:160px">
+<div style="margin-left:160px" id="allSectionContainer">
   <div class="w3-padding">Use any of the w3-animate-classes to fade, zoom or slide in tab content.</div>
 
   <div id="Fade" class="w3-container city w3-animate-opacity" style="display:none">
@@ -422,13 +422,19 @@ Is the minimum width between handrails 100cm?</h2>
   <input type="radio" name="E.3" value="no" id="E.3"> No<br>
   <input type="radio" name="E.3" value="dk"> Don't Know
 
-<form class="" action="/analysis" method="post">
-  <input type="submit" name="Submit" value="Submit">
-</form>
+<!-- <form class="" action="/analysis" method="post">
+  <input type="submit" name="Submit" value="Submit" id="">
+</form> -->
+<button type="button" name="button" id="submitDataToGetAnalysis">Submit</button>
+
 
 </div>
 
 </div>
+
+
+<div class="analysis" id="analysis"></div>
+
 
 <script src="./js/logic.js"></script>
 <script src="./js/domForForm.js"></script>
