@@ -61,7 +61,7 @@ body{
 }
 
 .dropdown .dropbtn {
-    font-size: 17px;    
+    font-size: 17px;
     border: none;
     outline: none;
     color: white;
@@ -114,11 +114,11 @@ body{
   .topnav .logo{
     width: 100%;
 display: flex;
-justify-content: center;  
+justify-content: center;
 }
 
   .topnav .item .logoo{
-display: none  } 
+display: none  }
 
   .topnav.responsive {position: relative;}
   .topnav.responsive .icon {
@@ -152,4 +152,9 @@ display: none  }
 }
 .side{
   margin-left:260px;
+}
+
+.analysis {
+  padding-top:170px;
+  padding-left: 30px;
 }
