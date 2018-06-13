@@ -1,43 +1,42 @@
-var http = require('http');
-var formidable = require('formidable');
 var fs = require('fs');
-var util = require('util');
 const formidable = require('formidable');
 const http = require('http');
 const util = require('util');
+let solutions = [];
+var path = '';
+var path2;
+let solutinA1 = ' you have to do something for the entrance';
+
 
 exports.post = (req, res) => {
-  let solutions = [];
-  let solutinA1 = ' you have to do something for the entrance';
+  // parse a file upload
+  var form = new formidable.IncomingForm();
+  form.encoding = 'utf-8';
+  form.uploadDir = __dirname + "/../../public/images";
+  form.keepExtensions = true;
+
+
   if (req.body.A1 === 'No') {
-    solutions.push('Solution for A1' + solutinA1);
-  }
-  if (req.body.A2 === 'No') {
-    solutions.push('Solution for A2' + solutinA1);
-  }
-  res.render('analysis', {
-    solutions
-  });
+    solutions.push('Solution for A1' + solutinA1);}
+    if (req.body.A2 === 'No') {
+      solutions.push('Solution for A2' + solutinA1);}
+
+  form.parse(req, function(err, fields, files) {
+    path2 =  '/images/'+files.img1.path.split("/")[6];
+    path3 =  '/images/'+files.img2.path.split("/")[6];
+    path4 =  '/images/'+files.img3.path.split("/")[6];
+    path5 =  '/images/'+files.img4.path.split("/")[6];
+    path6 =  '/images/'+files.img5.path.split("/")[6];
+
+      res.render('analysis', {
+      solutions, path2, path3, path4, path5, path6
+    });
+
+
+   });
+
+
+
+
 
 }
-
-// exports.get = (req, res)=>{
-
-//   res.render('fileupload');
-//for uploading images!!!!!!
-//   var form = new formidable.IncomingForm();
-// form.encoding = 'utf-8';
-// form.uploadDir = __dirname + "/images";
-// form.keepExtensions = true;
-//   form.parse(req, function (err, fields, files) {
-// var oldpath = files.filetoupload.path;
-// var newpath = '/home/israa/PWD-helpers/src/controllers/images/' + files.filetoupload.name;
-// fs.rename(oldpath, newpath, function (err) {
-//       if (err) throw err;
-//       res.render('fileupload')
-//     });
-// });
-// res.send(req.body);
-// if(req.body['B.2']==='No'){
-// }
-// }
